@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="shortcut icon"
+      href="img/portfolio-favicon.png"
+      type="image/x-icon"
+    />
+
+    <title>My Portfolio</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="main-container">
+        <div class="navbar">
+          <div class="logo">Zain</div>
+
+          <div>
+            <ul class="navbar-ul">
+              <li><a href="#about" class="navbar-links">About</a></li>
+
+              <li><a href="#projects" class="navbar-links">Projects</a></li>
+
+              <li><a href="#contact" class="navbar-links">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hamburger Navbar -->
+
+    <nav>
+      <div class="main-container">
+        <div class="hamburger-nav">
+          <div class="logo">Zain</div>
+
+          <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+              <span></span>
+
+              <span></span>
+
+              <span></span>
+            </div>
+
+            <div class="menu-links">
+              <li>
+                <a href="#about" class="navbar-links" onclick="toggleMenu()"
+                  >About</a
+                >
+              </li>
+
+              <li>
+                <a href="#projects" class="navbar-links" onclick="toggleMenu()"
+                  >Projects</a
+                >
+              </li>
+
+              <li>
+                <a href="#contact" class="navbar-links" onclick="toggleMenu()"
+                  >Contact</a
+                >
+              </li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+
+    <section>
+      <div class="hero-flex-container">
+        <div>
+          <img src="img/zain.png" alt="My Photo" class="hero-img" />
+        </div>
+
+        <div class="hero-content-container">
+          <p class="hero-p1">Hello, I'm</p>
+
+          <h1 class="hero-h1">Zain Ul Hassan Awan</h1>
+
+          <p class="hero-p2">Frontend Developer</p>
+
+          <div class="buttons-container">
+            <button class="btn btn-left">Download Resume</button>
+            <button class="btn btn-right" onclick="location.href='./#contact'">
+              Contact Info
+            </button>
+          </div>
+
+          <div class="social-icons-container">
+            <img
+              src="img/linkedin.png"
+              alt="My Linkedin Profile"
+              onclick="location.href='https://www.linkedin.com/in/zain-ul-hassan-awan-32a105227/'"
+            />
+
+            <img
+              src="img/github.png"
+              alt="My Github Profile"
+              onclick="location.href='https://github.com/zainulhasanawan'"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+
+    <section id="about">
+      <div class="about-top-div">
+        <p class="about-p1">Get To Know More</p>
+        <h1 class="about-h1">About Me</h1>
+      </div>
+
+      <div class="main-container">
+        <div class="about-flex-container">
+          <div>
+            <img src="img/zain-2.jpg" alt="My Picture" class="about-img" />
+          </div>
+
+          <div>
+            <div class="two-divs-container">
+              <div class="about-divs">
+                <img src="img/experience.png" alt="" class="about-icons" />
+
+                <h2 class="about-h2">Experience</h2>
+
+                <p class="about-p2">Experienced</p>
+
+                <p class="about-p2">Frontend Developer</p>
+              </div>
+
+              <div class="about-divs">
+                <img src="img/education.png" alt="" class="about-icons" />
+
+                <h2 class="about-h2">Education</h2>
+
+                <p class="about-p2">Matric & Inter in CS</p>
+
+                <p class="about-p2">Currently Enrolled in BS.CS</p>
+              </div>
+            </div>
+
+            <p class="about-p3">
+              I'm an enthusiastic frontend developer, well-versed in HTML & CSS.
+              With a growing portfolio, I'm dedicated to transforming ideas into
+              interactive digital realities by creating RESPONSIVE,
+              USER-FRIENDLY, and SEO-OPTIMIZED WEBSITES.
+            </p>
+          </div>
+
+          <img
+            src="img/arrow.png"
+            alt=""
+            class="arrow-icon"
+            onclick="location.href='./#projects'"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+
+    <section id="projects">
+      <div class="projects-top-div">
+        <p class="projects-p1">Browse My Recent</p>
+        <h class="projects-h1">Projects</h>
+      </div>
+
+      <div class="main-container main-container-projects">
+        <div class="boxes-container">
+          <div class="box">
+            <img src="img/App Development.svg" alt="" class="box-img" />
+
+            <h2 class="box-h2">wise.com Clone</h2>
+
+            <div class="box-btns-container">
+              <button
+                class="box-btn box-btn-left"
+                onclick="location.href = 'https://github.com/zainulhasanawan/wise.com-clone';"
+              >
+                GitHub
+              </button>
+              <button
+                class="box-btn"
+                onclick="location.href = 'https://zainulhasanawan.github.io/wise.com-clone/';"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+          <!-- <div class="box">
+            <img src="img/App Development.svg" alt="" class="box-img" />
+
+            <h2 class="box-h2">Law-Firm Project</h2>
+
+            <div class="box-btns-container">
+              <button class="box-btn box-btn-left">GitHub</button>
+              <button class="box-btn">Live Demo</button>
+            </div>
+          </div> -->
+
+          <div class="box">
+            <img src="img/App Development.svg" alt="" class="box-img" />
+
+            <h2 class="box-h2">Riseup Space</h2>
+
+            <div class="box-btns-container">
+              <button
+                class="box-btn box-btn-left"
+                onclick="location.href = 'https://github.com/zainulhasanawan/Riseup-Space'"
+              >
+                GitHub
+              </button>
+              <button
+                class="box-btn"
+                onclick="location.href = 'https://zainulhasanawan.github.io/Riseup-Space/';"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <img src="img/arrow.png" alt="" class="box-arrow-icon"
+        onclick="location.href='./#contact'"
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+
+    <footer id="contact">
+      <div class="footer-top-div">
+        <p class="footer-p1">Get In Touch</p>
+        <h1 class="footer-h1">Contact Me</h1>
+      </div>
+
+      <!-- <div class="contact-parent-div">
+        <div class="contact-child-div">
+          <img src="img/email.png" alt="" class="message-icon" />
+          <p>
+            <a href="mailto:examplemail@gmail.com" class="contact-a"
+              >zainulhassanawan001@outlook.com</a
+            >
+          </p>
+        </div>
+
+        <div class="contact-child-div">
+          <img src="img/linkedin.png" alt="" class="message-icon" />
+          <p class="contact-a">
+            <a
+              href="#"
+              class="contact-a"
+              onclick="location.href='https://www.linkedin.com/in/zain-ul-hassan-awan-32a105227/'"
+              >LinkedIn</a
+            >
+          </p>
+        </div>
+      </div> -->
+
+      <div>
+        <ul class="footer-ul">
+          <li><a href="#about" class="footer-links">About</a></li>
+
+          <li><a href="#projects" class="footer-links">Projects</a></li>
+
+          <li><a href="#contact" class="footer-links">Contact</a></li>
+        </ul>
+
+        <p class="copyright-p">
+          Copyright © 2023 Zain Ul Hassan Awan. All Rights Reserved
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
