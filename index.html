@@ -4,11 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      rel="shortcut icon"
-      href="img/portfolio-favicon.png"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
 
     <title>My Portfolio</title>
 
@@ -24,99 +20,88 @@
   </head>
 
   <body>
-    <!-- Navbar -->
-    <nav>
+    <!-- Header & Navbar -->
+
+    <header class="header-section">
       <div class="main-container">
-        <div class="navbar">
-          <div class="logo">Zain</div>
+        <div class="header-items">
+          <span class="logo">Zain</span>
 
-          <div>
-            <ul class="navbar-ul">
-              <li><a href="#about" class="navbar-links">About</a></li>
-
-              <li><a href="#projects" class="navbar-links">Projects</a></li>
-
-              <li><a href="#contact" class="navbar-links">Contact</a></li>
+          <nav>
+            <ul class="nav-ul" id="navUl">
+              <li><a href="#about" class="nav-links">About</a></li>
+              <li><a href="#skills" class="nav-links">Skills</a></li>
+              <li><a href="#projects" class="nav-links">Projects</a></li>
+              <li><a href="#contact" class="nav-links">Contact</a></li>
             </ul>
+          </nav>
+
+          <div class="burger" id="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
           </div>
+
+          <div class="overlay" id="overlay"></div>
         </div>
       </div>
-    </nav>
-
-    <!-- Hamburger Navbar -->
-
-    <nav>
-      <div class="main-container">
-        <div class="hamburger-nav">
-          <div class="logo">Zain</div>
-
-          <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-              <span></span>
-
-              <span></span>
-
-              <span></span>
-            </div>
-
-            <div class="menu-links">
-              <li>
-                <a href="#about" class="navbar-links" onclick="toggleMenu()"
-                  >About</a
-                >
-              </li>
-
-              <li>
-                <a href="#projects" class="navbar-links" onclick="toggleMenu()"
-                  >Projects</a
-                >
-              </li>
-
-              <li>
-                <a href="#contact" class="navbar-links" onclick="toggleMenu()"
-                  >Contact</a
-                >
-              </li>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
+    </header>
 
     <!-- Hero Section -->
 
     <section>
-      <div class="hero-flex-container">
-        <div>
-          <img src="img/zain.png" alt="My Photo" class="hero-img" />
-        </div>
-
-        <div class="hero-content-container">
-          <p class="hero-p1">Hello, I'm</p>
-
-          <h1 class="hero-h1">Zain Ul Hassan Awan</h1>
-
-          <p class="hero-p2">Frontend Developer</p>
-
-          <div class="buttons-container">
-            <button class="btn btn-left">Download Resume</button>
-            <button class="btn btn-right" onclick="location.href='./#contact'">
-              Contact Info
-            </button>
+      <div class="main-container">
+        <div class="hero-flexbox-div">
+          <div>
+            <img src="img/zain-001.jpg" alt="My Photo" class="hero-img" />
           </div>
 
-          <div class="social-icons-container">
-            <img
-              src="img/linkedin.png"
-              alt="My Linkedin Profile"
-              onclick="location.href='https://www.linkedin.com/in/zain-ul-hassan-awan-32a105227/'"
-            />
+          <div class="hero-content-container">
+            <p class="hero-p1">Hello, I'm</p>
 
-            <img
-              src="img/github.png"
-              alt="My Github Profile"
-              onclick="location.href='https://github.com/zainulhasanawan'"
-            />
+            <h1 class="hero-h1">Zain Ul Hassan Awan</h1>
+
+            <p class="hero-p2"><span class="auto-type"></span></p>
+
+            <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+            <script>
+              var typed = new Typed(".auto-type", {
+                strings: [
+                  "Front-end Developer",
+                  "JavaScript Developer",
+                  "Data Analyst",
+                ],
+                typeSpeed: 100,
+                backSpeed: 50,
+                loop: true,
+              });
+            </script>
+
+            <div class="buttons-container">
+              <button class="btn btn-left">Download Resume</button>
+
+              <button
+                class="btn btn-right"
+                onclick="location.href='./#contact'"
+              >
+                Contact Info
+              </button>
+            </div>
+
+            <div class="social-icons-container">
+              <ion-icon
+                name="logo-linkedin"
+                class="linkedin-icon"
+                onclick="window.open('https://www.linkedin.com/in/zain-ul-hassan-awan-32a105227/', '_blank')"
+              ></ion-icon>
+
+              <ion-icon
+                name="logo-github"
+                class="github-icon"
+                onclick="window.open('https://github.com/zainulhasanawan', '_blank')"
+              ></ion-icon>
+            </div>
           </div>
         </div>
       </div>
@@ -125,173 +110,224 @@
     <!-- About Section -->
 
     <section id="about">
-      <div class="about-top-div">
-        <p class="about-p1">Get To Know More</p>
-        <h1 class="about-h1">About Me</h1>
+      <div class="about-top">
+        <p class="about-top-p">Get To Know More</p>
+        <h1 class="about-top-h1">About Me</h1>
       </div>
 
       <div class="main-container">
-        <div class="about-flex-container">
+        <div class="about-flexbox-div">
           <div>
-            <img src="img/zain-2.jpg" alt="My Picture" class="about-img" />
+            <img src="img/zain-002.jpg" alt="My Picture" class="about-img" />
           </div>
 
           <div>
-            <div class="two-divs-container">
-              <div class="about-divs">
-                <img src="img/experience.png" alt="" class="about-icons" />
-
-                <h2 class="about-h2">Experience</h2>
-
-                <p class="about-p2">Experienced</p>
-
-                <p class="about-p2">Frontend Developer</p>
-              </div>
-
-              <div class="about-divs">
-                <img src="img/education.png" alt="" class="about-icons" />
-
-                <h2 class="about-h2">Education</h2>
-
-                <p class="about-p2">Matric & Inter in CS</p>
-
-                <p class="about-p2">Currently Enrolled in BS.CS</p>
-              </div>
-            </div>
-
-            <p class="about-p3">
-              I'm an enthusiastic frontend developer, well-versed in HTML & CSS.
-              With a growing portfolio, I'm dedicated to transforming ideas into
-              interactive digital realities by creating RESPONSIVE,
-              USER-FRIENDLY, and SEO-OPTIMIZED WEBSITES.
+            <p class="about-text">
+              Well, I got interested in Computer Science in my childhood. By 8th
+              Standard, I had already learned a lot of stuff about computers via
+              exploring & doing things. Then, for Matriculation, I chose
+              Computer Science as my major subject and at the time of
+              Intermediate, I decided to make Computer Science my profession.
+            </p>
+            <br />
+            <p class="about-text">
+              Somehow, I started with Data Science. I invested a lot of time in
+              learning Python and its libraries. I used to perform exploratory
+              analysis on various real-world datasets, uncovering valuable
+              insights and patterns from data to inform decision-making. I also
+              gained a bit knowledge of Machine Learning and its algorithms.
+            </p>
+            <br />
+            <p class="about-text">
+              Then, for diversification, I switched to Frontend Development, and
+              I'm on my way to becoming a MERN Stack Developer. Now, I have
+              experience in two different domains, and these two domains will
+              always be endlessly fascinating to me.
             </p>
           </div>
 
           <img
             src="img/arrow.png"
-            alt=""
             class="arrow-icon"
-            onclick="location.href='./#projects'"
+            onclick="location.href='./#skills'"
           />
         </div>
       </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Skills Section -->
 
-    <section id="projects">
-      <div class="projects-top-div">
-        <p class="projects-p1">Browse My Recent</p>
-        <h class="projects-h1">Projects</h>
+    <section id="skills">
+      <div class="skills-top">
+        <p class="skills-top-p">Explore My</p>
+        <h1 class="skills-top-h1">Skills</h1>
       </div>
 
-      <div class="main-container main-container-projects">
-        <div class="boxes-container">
-          <div class="box">
-            <img src="img/App Development.svg" alt="" class="box-img" />
+      <div class="main-container">
+        <div class="skills-flexbox-div">
+          <div class="skills-containers">
+            <h2 class="skills-h2">Front-end</h2>
 
-            <h2 class="box-h2">wise.com Clone</h2>
+            <ul>
+              <li class="skills-li">
+                <img
+                  src="img/checkmark.png"
+                  alt="checkmark"
+                  class="checkmark"
+                />
+                <span class="skills-span"
+                  >HTML<img
+                    src="img/html-1.svg"
+                    alt="Python Logo"
+                    class="the-logos"
+                /></span>
+              </li>
 
-            <div class="box-btns-container">
-              <button
-                class="box-btn box-btn-left"
-                onclick="location.href = 'https://github.com/zainulhasanawan/wise.com-clone';"
-              >
-                GitHub
-              </button>
-              <button
-                class="box-btn"
-                onclick="location.href = 'https://zainulhasanawan.github.io/wise.com-clone/';"
-              >
-                Live Demo
-              </button>
-            </div>
+              <li class="skills-li">
+                <img
+                  src="img/checkmark.png"
+                  alt="checkmark"
+                  class="checkmark"
+                />
+                <span class="skills-span"
+                  >CSS<img
+                    src="img/css-3.svg"
+                    alt="Pandas Logo"
+                    class="the-logos"
+                /></span>
+              </li>
+
+              <li class="skills-li">
+                <img
+                  src="img/checkmark.png"
+                  alt="checkmark"
+                  class="checkmark"
+                />
+                <span class="skills-span"
+                  >JavaScript<img
+                    src="img/javascript-1.svg"
+                    alt="Seaborn Logo"
+                    class="the-logos"
+                /></span>
+              </li>
+
+              <li class="skills-li">
+                <img
+                  src="img/checkmark.png"
+                  alt="checkmark"
+                  class="checkmark"
+                />
+                <span class="skills-span"
+                  >React JS<img
+                    src="img/react-2.svg"
+                    alt="Matplotlib Logo"
+                    class="the-logos"
+                /></span>
+              </li>
+
+              <li class="skills-li">
+                <img
+                  src="img/checkmark.png"
+                  alt="checkmark"
+                  class="checkmark"
+                />
+                <span class="skills-span"
+                  >Git & GitHub<img
+                    src="img/github-icon-1.svg"
+                    alt="Plotly Logo"
+                    class="the-logos"
+                /></span>
+              </li>
+            </ul>
           </div>
 
-          <!-- <div class="box">
-            <img src="img/App Development.svg" alt="" class="box-img" />
+          <div class="skills-containers">
+            <h2 class="skills-h2">Data Science</h2>
+            <ul>
+              <li class="skills-li">
+                <img
+                  src="img/checkmark.png"
+                  alt="checkmark"
+                  class="checkmark"
+                />
+                <span class="skills-span"
+                  >Python<img
+                    src="img/python-5.svg"
+                    alt="Python Logo"
+                    class="the-logos"
+                /></span>
+              </li>
 
-            <h2 class="box-h2">Law-Firm Project</h2>
+              <li class="skills-li">
+                <img
+                  src="img/checkmark.png"
+                  alt="checkmark"
+                  class="checkmark"
+                />
+                <span class="skills-span"
+                  >Pandas<img
+                    src="img/pandas.svg"
+                    alt="Pandas Logo"
+                    class="the-logos"
+                /></span>
+              </li>
 
-            <div class="box-btns-container">
-              <button class="box-btn box-btn-left">GitHub</button>
-              <button class="box-btn">Live Demo</button>
-            </div>
-          </div> -->
+              <li class="skills-li">
+                <img
+                  src="img/checkmark.png"
+                  alt="checkmark"
+                  class="checkmark"
+                />
+                <span class="skills-span"
+                  >Seaborn<img
+                    src="img/seaborn-1.svg"
+                    alt="Seaborn Logo"
+                    class="the-logos"
+                /></span>
+              </li>
 
-          <div class="box">
-            <img src="img/App Development.svg" alt="" class="box-img" />
+              <li class="skills-li">
+                <img
+                  src="img/checkmark.png"
+                  alt="checkmark"
+                  class="checkmark"
+                />
+                <span class="skills-span"
+                  >Matplotlib<img
+                    src="img/matplotlib-1.svg"
+                    alt="Matplotlib Logo"
+                    class="the-logos"
+                /></span>
+              </li>
 
-            <h2 class="box-h2">Riseup Space</h2>
-
-            <div class="box-btns-container">
-              <button
-                class="box-btn box-btn-left"
-                onclick="location.href = 'https://github.com/zainulhasanawan/Riseup-Space'"
-              >
-                GitHub
-              </button>
-              <button
-                class="box-btn"
-                onclick="location.href = 'https://zainulhasanawan.github.io/Riseup-Space/';"
-              >
-                Live Demo
-              </button>
-            </div>
+              <li class="skills-li">
+                <img
+                  src="img/checkmark.png"
+                  alt="checkmark"
+                  class="checkmark"
+                />
+                <span class="skills-span"
+                  >Plotly<img
+                    src="img/plotly.png"
+                    alt="Plotly Logo"
+                    class="the-logos"
+                /></span>
+              </li>
+            </ul>
           </div>
         </div>
-
-        <img src="img/arrow.png" alt="" class="box-arrow-icon"
-        onclick="location.href='./#contact'"
       </div>
     </section>
 
-    <!-- Contact Section -->
-
-    <footer id="contact">
-      <div class="footer-top-div">
-        <p class="footer-p1">Get In Touch</p>
-        <h1 class="footer-h1">Contact Me</h1>
-      </div>
-
-      <!-- <div class="contact-parent-div">
-        <div class="contact-child-div">
-          <img src="img/email.png" alt="" class="message-icon" />
-          <p>
-            <a href="mailto:examplemail@gmail.com" class="contact-a"
-              >zainulhassanawan001@outlook.com</a
-            >
-          </p>
-        </div>
-
-        <div class="contact-child-div">
-          <img src="img/linkedin.png" alt="" class="message-icon" />
-          <p class="contact-a">
-            <a
-              href="#"
-              class="contact-a"
-              onclick="location.href='https://www.linkedin.com/in/zain-ul-hassan-awan-32a105227/'"
-              >LinkedIn</a
-            >
-          </p>
-        </div>
-      </div> -->
-
-      <div>
-        <ul class="footer-ul">
-          <li><a href="#about" class="footer-links">About</a></li>
-
-          <li><a href="#projects" class="footer-links">Projects</a></li>
-
-          <li><a href="#contact" class="footer-links">Contact</a></li>
-        </ul>
-
-        <p class="copyright-p">
-          Copyright © 2023 Zain Ul Hassan Awan. All Rights Reserved
-        </p>
-      </div>
-    </footer>
-
     <script src="script.js"></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>

@@ -1,128 +1,186 @@
 /*************************************************/
+/* Header, Navbar & Hero Section */
 
-@media screen and (max-width: 1200px) {
-  .navbar {
-    display: none;
+@media screen and (max-width: 990px) {
+  .burger {
+    display: block;
   }
 
-  .hamburger-nav {
-    display: flex;
-    justify-content: space-between;
+  .nav-ul {
+    position: absolute;
+    right: 0;
+    top: 15vh;
+    width: 50%;
+    height: auto;
+    background: #fff;
+    flex-direction: column;
     align-items: center;
+    gap: 4rem;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    padding: 2rem;
+    z-index: 1;
+  }
 
-    padding: 3.5rem 5.5em 0 5.5rem;
-    margin-bottom: 5rem;
+  .nav-links::before {
+    transform: scaleX(1);
+  }
+
+  .nav-ul.show {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .burger.active div.line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .burger.active div.line2 {
+    opacity: 0;
+  }
+
+  .burger.active div.line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
   }
 
   /* Hero Section */
 
-  .hero-flex-container {
+  .hero-flexbox-div {
     flex-direction: column;
-    gap: 3.5rem;
+    gap: 3rem;
+
+    height: 100vh;
   }
 
   .hero-img {
-    width: 350px;
-    height: 350px;
-  }
-
-  /* About Section */
-
-  .about-top-div {
-    margin-bottom: 3.5rem;
-  }
-
-  .about-flex-container {
-    flex-direction: column;
-    justify-content: center;
-    gap: 4rem;
-  }
-
-  .about-img {
-    width: 350px;
-    height: auto;
-  }
-
-  .arrow-icon {
-    display: none;
-  }
-
-  /* Projects Section */
-
-  .box-arrow-icon {
-    display: none;
-  }
-
-  .about-img {
-    height: 385px;
-  }
-
-  .boxes-container {
-    flex-wrap: wrap;
+    width: 370px;
+    height: 370px;
   }
 }
-
-/*************************************************/
-
-@media screen and (max-width: 500px) {
-  .two-divs-container {
-    flex-direction: column;
-  }
-
-  .about-p3 {
-    font-size: 1.2rem;
-  }
-
-  .footer-ul {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-/*************************************************/
 
 @media screen and (max-width: 600px) {
-  .hamburger-nav {
-    padding: 3.5rem 0 0 0;
+  .nav-ul {
+    width: 60%;
   }
-
-  /* Hero Section */
 
   .hero-h1 {
     font-size: 3.1rem;
   }
 
   .hero-p2 {
-    font-size: 3rem;
+    font-size: 2.9rem;
   }
 
   .hero-img {
-    width: 310px;
-    height: 310px;
+    width: 330px;
+    height: 330px;
   }
 
   .btn {
-    font-size: 1.3rem;
-
     padding: 1.5rem 2rem;
   }
+}
 
-  /* About Section */
+/*************************************************/
+/* About Section */
+
+@media screen and (max-width: 1250px) {
+  .about-text {
+    font-size: 1.6rem;
+  }
 
   .about-img {
-    width: 270px;
-    height: auto;
+    width: 335px;
+    height: 380px;
   }
 
-  .about-h2 {
-    font-size: 1.7rem;
-  }
-
-  .about-p2 {
-    font-size: 1.5rem;
-  }
-
-  .about-p3 {
-    font-size: 1.4rem;
+  .about-flexbox-div {
+    padding: 0 2.5rem 0 2.5rem;
   }
 }
+
+@media screen and (max-width: 990px) {
+  .about-top {
+    margin-bottom: 3.5rem;
+  }
+
+  .about-flexbox-div {
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+    padding: 0 3.5rem 0 3.5rem;
+  }
+
+  .about-text {
+    font-size: 1.8rem;
+  }
+
+  .about-img {
+    width: 300px;
+    height: 340px;
+  }
+
+  .arrow-icon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .about-flexbox-div {
+    padding: 0 2rem 0 2rem;
+  }
+
+  .about-text {
+    font-size: 1.6rem;
+  }
+
+  .about-img {
+    width: 265px;
+    height: 295px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .about-flexbox-div {
+    padding: 0 0 0 0;
+  }
+
+  .about-text {
+    font-size: 1.5rem;
+  }
+}
+
+/*************************************************/
+/* Skills Section */
+
+@media screen and (max-width: 780px) {
+  .skills-flexbox-div {
+    flex-wrap: wrap;
+  }
+
+  .skills-span {
+    font-size: 2.4rem;
+  }
+}
+
+/*************************************************/
+/*  Section */
